@@ -34,11 +34,12 @@ FROM df a
     on (a.year - 1) = b.year
     and a.namecode = b.namecode
 "
-tt <- sqldf(s)
-tt[which(tt$namecode == 'JameEd00'), c('year', 'Rk', 'Rk_l1', 'quintile', 'q_l1')]
+FullDf <- sqldf(s)
+#tt[which(tt$namecode == 'JameEd00'), c('year', 'Rk', 'Rk_l1', 'quintile', 'q_l1')]
+
+write.csv(FullDf, './data/clean/FullDf.csv', row.names=FALSE, quote = FALSE)
 
 
-library(caret)
 
 
 

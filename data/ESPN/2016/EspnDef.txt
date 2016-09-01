@@ -1,0 +1,33 @@
+RANK	TEAM	BYE
+1	Seattle Seahawks	5
+2	Denver Broncos	11
+3	Carolina Panthers	7
+4	Cincinnati Bengals	9
+5	Houston Texans	9
+6	Kansas City Chiefs	5
+7	Arizona Cardinals	9
+8	Green Bay Packers	4
+9	Oakland Raiders	10
+10	New England Patriots	9
+11	Minnesota Vikings	6
+12	New York Jets	11
+13	Buffalo Bills	10
+14	Los Angeles Rams	8
+15	Indianapolis Colts	10
+16	Jacksonville Jaguars	5
+17	Baltimore Ravens	8
+18	Pittsburgh Steelers	8
+19	Philadelphia Eagles	4
+20	Tampa Bay Buccaneers	6
+21	Chicago Bears	9
+22	Detroit Lions	10
+23	Washington Redskins	9
+24	New York Giants	8
+25	Tennessee Titans	13
+26	Atlanta Falcons	11
+27	San Diego Chargers	11
+28	Miami Dolphins	8
+29	San Francisco 49ers	8
+30	Dallas Cowboys	7
+31	Cleveland Browns	13
+32	New Orleans Saints	5

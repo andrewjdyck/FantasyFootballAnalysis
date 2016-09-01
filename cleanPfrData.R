@@ -2,7 +2,7 @@
 # clean PFR fantasy data
 
 for (i in 2000:2015) {
-  d <- read.csv(paste0('./data/pfr_fantasy_', i, '.csv'), skip=1, stringsAsFactors = F)
+  d <- read.csv(paste0('./data/PFR/pfr_fantasy_', i, '.csv'), skip=1, stringsAsFactors = F)
   out <- d[which(d[,1]!='Rk'),]
   out$namecode <- sapply(out$X, function(i) strsplit(i, '\\\\')[[1]][2])
   write.csv(out, file=paste0('./data/clean/pfr_fantasy_', i, '.csv'), row.names=FALSE, quote=FALSE)
@@ -15,6 +15,10 @@ d <- lapply(
     read.csv(paste0('./data/clean/pfr_fantasy_', year, '.csv'), header=T, stringsAsFactors = F)
   }
 )
+for (i in 2000:2015) {
+  unlink(paste0('./data/clean/pfr_fantasy_', i, '.csv'))
+}
+
 df <- ldply(d, data.frame, .id="year")
 df$year <- as.numeric(as.character(df$year))
 df$quintile <- NA
@@ -37,7 +41,7 @@ FROM df a
 FullDf <- sqldf(s)
 #tt[which(tt$namecode == 'JameEd00'), c('year', 'Rk', 'Rk_l1', 'quintile', 'q_l1')]
 
-write.csv(FullDf, './data/clean/FullDf.csv', row.names=FALSE, quote = FALSE)
+write.csv(FullDf, './data/Pfr_FantasyData_AllSeasons.csv', row.names=FALSE, quote = FALSE)
 
 
 
